@@ -74,6 +74,7 @@ public class UserController {
 //        List<Object> results = session.createQuery(hqlCount,Object.class).getResultList();
 //        System.out.println("Count:"+results);
     }
+
 //    GROUP BY Clause and Aggregate function
 public static void getMaxSalaryGroupBy(Session session) {
     String hql = "SELECT SUM(U.salary), U.city FROM User U GROUP BY U.city";
