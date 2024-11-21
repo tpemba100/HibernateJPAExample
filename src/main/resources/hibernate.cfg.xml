@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Drop and re-create the database schema on startup (not recommended for production) -->
+        <!-- Use 'update' to alter the schema without dropping data on each start -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Database connection settings -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/usersDb?createDatabaseIfNotExist=true</property>        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Vm123@Mysql</property>
+
+        <!-- MySQL DB dialect for Hibernate 6.x -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Print all executed SQL to the console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Naming strategy to convert camelCase to underscores -->
+        <property name="hibernate.physical_naming_strategy">
+            org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        </property>
+
+        <!-- Entity class mappings -->
+        <mapping class="model.User"/>
+
+    </session-factory>
+
+</hibernate-configuration>
