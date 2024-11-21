@@ -12,7 +12,7 @@
         <!-- Database connection settings -->
         <property name="connection.url">jdbc:mysql://localhost:3306/usersDb?createDatabaseIfNotExist=true</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">Vm123@Mysql</property>
+        <property name="hibernate.connection.password"></property>
 
         <!-- MySQL DB dialect for Hibernate 6.x -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
